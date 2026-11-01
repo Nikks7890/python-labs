@@ -3,4 +3,10 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+<<<<<<< HEAD
 .idea/
+=======
+.benchmarks/
+.idea/
+.vscode/
+>>>>>>> d0e45d95cacca72e5103de7fa7517889fee50a90
