@@ -84,5 +84,6 @@ def main() -> None:
     )
     print(render_report(processor(SAMPLE)))
 
+
 if __name__ == "__main__":
     main()

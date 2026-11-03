@@ -80,7 +80,7 @@ def _configured(min_nights: int = 1) -> Callable[[Iterable[Booking]], Report]:
     )
 
 
-#референтна прозорість і відсутність мутацій
+# референтна прозорість і відсутність мутацій
 def test_referential_transparency(bookings: list[Booking]) -> None:
     p = _configured()
     snapshot = deepcopy(bookings)
@@ -105,7 +105,7 @@ def test_result_contains_new_objects(bookings: list[Booking]) -> None:
     assert result["bookings"][0] is not bookings[0]
 
 
-#фільтрація та правильність
+# фільтрація та правильність
 def test_only_confirmed_are_processed(bookings: list[Booking]) -> None:
     result = _configured()(bookings)
     ids = [b["id"] for b in result["bookings"]]
@@ -144,7 +144,8 @@ def test_empty_bookings() -> None:
     assert result == {"count": 0, "revenue": 0, "bookings": []}
 
 
-#окремі чисті функції та фабрики
+# окремі чисті функції та фабрики
+
 
 def test_base_cost_and_pricing_fields(bookings: list[Booking]) -> None:
     assert base_cost(bookings[0]) == 300.0
@@ -154,12 +155,13 @@ def test_base_cost_and_pricing_fields(bookings: list[Booking]) -> None:
     assert priced["tourist_fee"] == 100.0
     assert priced["total"] == 1100.0
 
+
 def test_fee_uses_discounted_price(bookings: list[Booking]) -> None:
     # перевіряю, що fee_percent рахується від ціни ПІСЛЯ знижки,
     # а не від базової — це легко переплутати
     priced = calc_booking(bookings[1], lambda b, p: p * 0.5, percent_fee(0.1))
     assert priced["base_cost"] == 2000.0
-    assert priced["tourist_fee"] == 100.0    # 10% від 1000, не від 2000
+    assert priced["tourist_fee"] == 100.0  # 10% від 1000, не від 2000
 
 
 def test_chain_discounts_composes_in_order(bookings: list[Booking]) -> None:

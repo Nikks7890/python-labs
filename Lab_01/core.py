@@ -12,8 +12,8 @@ class Booking(TypedDict, total=False):
     room_type: str
     nights: int
     price_per_night: float
-    month: int          # 1..12
-    status: str         #"confirmed" / "pending" / "cancelled"
+    month: int  # 1..12
+    status: str  # "confirmed" / "pending" / "cancelled"
 
     # ці поля з'являються тільки після розрахунку
     base_cost: float
@@ -35,7 +35,8 @@ FeeFn = Callable[[Booking, float], float]
 SeasonFn = Callable[[int], str]
 
 
-#прості чисті функції
+# прості чисті функції
+
 
 def base_cost(booking: Booking) -> float:
     # скільки коштує проживання без знижок і зборів
@@ -71,7 +72,8 @@ def make_report(bookings: Sequence[Booking]) -> Report:
         "bookings": list(bookings),
     }
 
-#фабрики політик
+
+# фабрики політик
 def season_by_month(month: int) -> str:
     if month in (6, 7, 8):
         return "high"
