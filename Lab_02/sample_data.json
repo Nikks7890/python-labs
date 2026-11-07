@@ -1,0 +1,7 @@
+[
+  {"id": 1, "name": "ivan petrenko", "category": "Pro", "results": [9.5, 9.8, 10.0]},
+  {"id": 2, "name": "olena kovalenko", "category": "Amateur", "results": [8.0, 8.5, 8.2]},
+  {"id": 3, "name": "maksym shevchenko", "category": "Pro", "results": [9.0, 9.2, 8.9]},
+  {"id": 4, "name": "anna bondar", "category": "Junior", "results": [7.5, 7.8, 8.0]},
+  {"id": 5, "name": "petro ivanov", "category": "Pro", "results": [9.9, 9.7, 9.8]}
+]
