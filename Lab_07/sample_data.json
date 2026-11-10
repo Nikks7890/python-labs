@@ -1,0 +1,8 @@
+[
+  {"name": "  oleh kovalenko ", "country": "ukraine", "points": 92.5, "penalties": 1.5, "age": 24},
+  {"name": "anna smith", "country": "usa", "points": 95.0, "penalties": 3.0, "age": 22},
+  {"name": "Jan Novak", "country": "czechia", "points": 88.0, "penalties": 0.0, "age": 27},
+  {"name": "mia lopez", "country": "spain", "points": 90.0, "penalties": 7.0, "age": 20},
+  {"name": "tom young", "country": "usa", "points": 97.0, "penalties": 0.5, "age": 15},
+  {"name": "iryna bondar", "country": "ukraine", "points": 91.0, "penalties": 2.0, "age": 19}
+]
