@@ -1,0 +1,8 @@
+[
+  {"kind": "move", "dx": 10, "dy": 5},
+  {"kind": "rotate", "angle": 90},
+  {"kind": "scale", "factor": 2},
+  {"kind": "move", "dx": -4, "dy": 2.5},
+  {"kind": "rotate", "angle": 300},
+  {"kind": "delete"}
+]
